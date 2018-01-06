@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+<constant name="struts.mapper.action.prefix.enabled" value="true" />
+
+<package name="default" extends="struts-default">
+             
+        <action name="testSession" class="Action.TestSession"  >
+            <result name="success"    >/test.jsp</result>
+             <result name="failure"    >/failure.jsp</result>
+        </action>
+ 
+        
+         <action name="getASX" class="Action.AsxChart" method="getASX" >
+            <result name="success"    >/ASX.jsp</result>
+            
+        </action>
+         <action name="updateASX" class="Action.AsxChart" method="updateASX" >
+            <result name="success"    >/ASX.jsp</result>
+            
+        </action>
+        
+           <action name="clearASX" class="Action.AsxChart" method="clearASX" >
+            <result name="success"    >/ASX.jsp</result>
+            
+        </action>
+        
+        
+             <action name="updateLookASX" class="Action.CheckASX" method="updateLookASX" >
+            <result name="success"    >/ASXLook.jsp</result>
+            
+        </action>
+     
+            <action name="lookASX" class="Action.CheckASX" method="getLookASX" >
+            <result name="success"    >/ASXLook.jsp</result>
+            
+        </action>   
+        
+     <action name="lookNext" class="Action.CheckASX" method="lookNext" >
+            <result name="success"    >/ASXLook.jsp</result>
+            
+        </action>   
+       
+       
+</package>
+      
+
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

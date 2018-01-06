@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+   
+<package name="default" extends="struts-default">
+        
+ 
+        
+         <action name="notes" class="Action.TradesAction" method="notes" >
+            <result name="success"    >/ChartSummary.jsp</result>
+        </action>
+        
+         <action name="setResearch" class="Action.TradesAction" method="setResearch" >
+            <result name="success"    >/ChartResearch.jsp</result>
+             <result name="no"    >/chartwork.jsp</result>
+        </action>
+        
+         <action name="setChartImage" class="Action.TradesAction" method="setChartImage" >
+            <result name="success"    >/chartwork.jsp</result>
+            
+        </action>
+        
+         <action name="updateTrade" class="Action.TradesAction" method="updateTrade" >
+            <result name="success"    >/chartwork.jsp</result>
+            
+        </action>
+        
+            <action name="findTrades" class="Action.TradesAction" method="findTrades" >
+            <result name="success"    >/ChartFind.jsp</result>
+            
+        </action>
+	
+	
+            <action name="findTrade" class="Action.TradesAction" method="findTrade" >
+            <result name="success"    >/ChartFind.jsp</result>
+            
+        </action>  
+       
+</package>
+      
+
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

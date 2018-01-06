@@ -1,0 +1,132 @@
+
+
+
+<%@ page import="access.TechStrAccess" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Hashtable" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="access.StockAccess" %>
+
+<%@ taglib prefix="c"
+           uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="UTF-8">
+      <title>Home</title>
+      <meta name="generator" content="Serif WebPlus X8 (16,0,1,21)">
+      <meta name="viewport" content="width=960">
+
+
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Datepicker - Default functionality</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="/Research/sketch.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+        } );
+        </script>
+
+        <!-- dependency: React.js -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-with-addons.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+
+        <!-- Literally Canvas -->
+        <script src="/js/literallycanvas.js"></script>
+    <link href="/css/literallycanvas.css" rel="stylesheet">
+
+      <link rel="stylesheet" type="text/css" href="wpscripts/wpstyles.css">
+      <style type="text/css">
+        .OBJ-1 { border:1px solid #000000;border-radius:2px / 2px;background-color:#ffffff;background:#ffffff; }
+        .C-1 { line-height:18.00px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      .auto-style1 {
+    margin-top: 253px;
+  }
+
+
+  th, td {
+      padding: 15px;
+      text-align: left;
+  }
+  th, td {
+      border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) {background-color: #f2f2f2}
+  TD{font-family: Consolas;}
+      </style>
+    </head>
+
+
+    <body style="height: 1028px" bgcolor="#E6E6E6">
+
+
+        <div id="divMain" style="background:transparent;margin-left:auto;margin-left;position:relative;width:100%;height:100%">
+
+
+            <p class="Body"><span class="C-1">Welcome Rowan Save Charts system </span></p>
+     <p class="Body"><span class="C-1">code:${code }  || category :${category } </span></p>
+
+        <div class="my-drawing"></div>
+        </div>
+
+    <br>
+      <br>
+      <br>
+        <br>
+        <br>
+
+
+
+
+          <br>
+          <script>
+            $(document).ready(function() {
+              var img = new Image()
+
+              img.src ="${chart.image}";
+
+
+
+
+            var bgi = "url(" + img.src + ")";
+
+              var lc = LC.init(
+                  document.getElementsByClassName('my-drawing')[0],
+                  {
+                    backgroundShapes: [
+                      LC.createShape(
+                        'Image', {x: 20, y: 20, image: img}),
+                      LC.createShape(
+                        'Text', {
+                          x: 200, y: 200, text: "I am in the background",
+                          font: "bold 12px Helvetica"
+                        })
+                    ]
+                  });
+              // the background image is not included in the shape list that is
+              // saved/loaded here
+              var localStorageKey = 'drawing-with-background'
+              if (localStorage.getItem(localStorageKey)) {
+                lc.loadSnapshotJSON(localStorage.getItem(localStorageKey));
+              }
+              lc.on('drawingChange', function() {
+                localStorage.setItem(localStorageKey, lc.getSnapshotJSON());
+              });
+            });
+          </script>
+
+
+      </body>
+    </html>

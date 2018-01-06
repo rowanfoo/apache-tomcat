@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+   
+<package name="default" extends="struts-default">
+        
+ 
+        
+         <action name="getIndex" class="Action.SummaryAction" method="setIndex" >
+            <result name="success"    >/ChartSummary.jsp</result>
+             <result name="error"    >/Error.jsp</result>
+            
+            
+        </action>
+        
+         <action name="getWishlist" class="Action.SummaryAction" method="setWishlist" >
+            <result name="success"    >/ChartSummary.jsp</result>
+            <result name="error"    >/Error.jsp</result>
+            
+        </action>
+        
+            
+        
+        
+</package>
+      
+
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

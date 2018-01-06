@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+   
+<package name="default" extends="struts-default">
+        
+ 
+        
+
+        
+         <action name="display" class="Action.CompanyAction" method="displayAction" >
+            <result name="success"    >/default.jsp</result>
+        </action>
+        
+         <action name="save" class="Action.CompanyAction" method="saveAction" >
+            <result name="success" type="redirectAction">display</result>
+        </action>
+                
+
+        <action name="findCode" class="Action.CompanyAction" method="findAllCompanyCodeAction" >
+            <result name="success"    >/chart.jsp</result>
+        </action>
+        
+        
+        <action name="find" class="Action.CompanyAction" method="findAction" >
+            <result name="success"    >/find.jsp</result>
+        </action>
+       
+</package>
+      
+
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

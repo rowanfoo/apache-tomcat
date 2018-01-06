@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+   
+<package name="default" extends="struts-default">
+        
+ 
+        
+         <action name="getCharts" class="Action.ChartSaveAction" method="getChartAction" >
+            <result name="success"    >/chartwork.jsp</result>
+        </action>
+        
+        
+        
+        <action name="setResearch" class="Action.ChartSaveAction" method="setResearch">
+            <result name="success"    >/ChartSummary.jsp</result>
+             <result name="failure"    >/failure.jsp</result>
+            
+        </action>
+        
+        
+        <action name="saveChart" class="Action.ChartSaveAction" method="saveChart">
+            <result name="success"    >/chartwork.jsp</result>
+             <result name="failure"    >/failure.jsp</result>
+            
+        </action>
+        <action name="chart" class="Action.ChartSaveAction" method="chart">
+            <result name="success"    >/ChartSummary.jsp</result>
+             <result name="failure"    >/failure.jsp</result>
+            
+        </action>
+
+       <action name="getResearch" class="Action.ChartSaveAction" method="getResearch">
+            <result name="success"    >/ChartResearch.jsp</result>
+             <result name="failure"    >/failure.jsp</result>
+            
+        </action>
+
+       <action name="chartres" class="Action.ChartSaveAction" method="chartres">
+            <result name="success"    >/ChartResearch.jsp</result>
+             <result name="failure"    >/failure.jsp</result>
+            
+        </action>
+        
+       
+</package>
+      
+
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+
